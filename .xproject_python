@@ -1,0 +1,39 @@
+name = "anchor"
+home = "https://github.com/podboy/anchor/"
+description = "The trusted anchor for SSH keys, SSL certificates, and account credentials."
+keywords = []
+version = "0.1.alpha.1"
+
+[authors.zoumingzhe]
+name = "Mingzhe Zou"
+email = "zoumingzhe@outlook.com"
+
+[packages.anchor-reflex]
+base = "reflex"
+description = "Reflex-based web application for Anchor."
+requires_python = ">=3.10"
+authors = [
+    "zoumingzhe",
+]
+keywords = []
+requirements = [
+    "xkeys>=0.7",
+]
+build_backend = "hatchling"
+max_complexity = 10
+max_line_length = 127
+
+[packages.anchor-reflex.modules.reflex]
+base = "anchor_reflex"
+exclude = [
+    "unittest",
+]
+omitted = [
+    "attribute.py",
+    "unittest/*",
+]
+
+[packages.anchor-reflex.modules.reflex.scripts]
+
+[packages.anchor-reflex.modules.reflex.templates]
+"attribute.py" = true
